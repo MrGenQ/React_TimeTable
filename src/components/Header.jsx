@@ -1,14 +1,23 @@
-import { Container, Navbar } from "react-bootstrap"
-import Navigation from "./Navigation"
-
-const Header = () =>{
+import {Navbar} from "react-bootstrap";
+import {Container} from "react-bootstrap";
+import User from "./User";
+const Header = ()=>{
     return(
-        <Navbar bg="black" variant="dark" fixed="top">
-            <Container>
-                <Navbar.Brand href="#home">TimeTable app</Navbar.Brand>
-                <Navigation/>
-            </Container>
-        </Navbar>
+        <>
+            <Navbar bg="dark" variant="dark">
+                <Container>
+                    <Navbar.Brand href="#home">
+                        TimeTable app
+                    </Navbar.Brand>
+                    <Navbar.Collapse className="justify-content-end">
+                        <Navbar.Text>
+                            <User/>
+                        </Navbar.Text>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+        </>
     )
 }
+
 export default Header
